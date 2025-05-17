@@ -1,3 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #808080;
+        }
+        
+        .menu-container {
+            width: 90%;
+            max-width: 400px;
+            margin: 50px auto;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .menu-item {
+            padding: 25px 20px;
+            font-size: 28px;
+            color: #005b5b;
+            background-color: #e0f7f4;
+            border-bottom: 1px solid #b3e0e0;
+            display: block;
+            text-decoration: none;
+        }
+        
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <a href="#" class="menu-item">Home</a>
+        <a href="#" class="menu-item">Posts</a>
+        <a href="#" class="menu-item">Pinterest</a>
+        <a href="#" class="menu-item">YouTube</a>
+    </div>
+        
+<script>
 // menu.js - Separate menu functionality file
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -18,41 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add the menu styles to the head
     const menuStyles = document.createElement('style');
     menuStyles.textContent = `
-        .menu-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-            z-index: 100;
-        }
 
-        .menu-popup {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #e0f7f4;
-            border-radius: 0 0 20px 20px;
-            overflow: hidden;
-            z-index: 101;
-        }
-
-        .menu-item {
-            padding: 25px 20px;
-            font-size: 28px;
-            color: #005b5b;
-            border-bottom: 1px solid #b3e0e0;
-            display: block;
-            text-decoration: none; 
-            font-family: 'Arial', sans-serif;
-        }
-        
-        .menu-item:last-child {
-            border-bottom: none;
-        }
     `;
     document.head.appendChild(menuStyles);
 
@@ -81,3 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+</script>
+</body>
+</html>
