@@ -1,0 +1,19 @@
+/* TEAM */
+	Artist & Creator: Vishal Vaishnav
+	Alternate Name: VisualistVishal
+	Email: Vishalvaishnavofficial@gmail.com
+	Location: India
+	Social Media & Links:
+		Pinterest: https://www.pinterest.com/VishalVaishnavOfficial/
+		YouTube: https://youtube.com/@VisualistVishal
+		Spotify: https://open.spotify.com/user/31z3cs2aew3ntj573lgg3bxzmy7e
+		Art Gallery: https://vishalvaishnavofficial.pages.dev/art-gallery
+
+/* SITE */
+	Last update: 2025/12/31
+	Main URL: https://vishalvaishnavofficial.pages.dev
+	Language: English
+	Doctype: HTML5
+	Standards: Schema.org, JSON-LD
+	Components: Cloudflare Pages
+	Software: Visual Studio Code, Imagination & Colors
