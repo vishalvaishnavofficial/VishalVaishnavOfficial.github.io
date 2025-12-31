@@ -17,19 +17,34 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Vishal Vaishnav",
-  "alternateName": "VisualistVishal",
-  "url": "https://vishalvaishnavofficial.pages.dev",
-  "image": "https://vishalvaishnavofficial.pages.dev/img/icon.png",
-  "description": "Vishal Vaishnav is an artist and creator sharing original paintings, visual storytelling, and creative inspirations through colors and imagination.",
-  "email": "mailto:Vishalvaishnavofficial@gmail.com",
-  "sameAs": [
-    "https://youtube.com/@VisualistVishal",
-    "https://www.pinterest.com/VishalVaishnavOfficial/",
-    "https://open.spotify.com/user/31z3cs2aew3ntj573lgg3bxzmy7e",
-    "https://vishalvaishnavofficial.pages.dev/art-gallery",
-    "https://vishalvaishnavofficial.pages.dev/developers"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://vishalvaishnavofficial.pages.dev/#website",
+      "url": "https://vishalvaishnavofficial.pages.dev/",
+      "name": "Vishal Vaishnav",
+      "alternateName": "VisualistVishal",
+      "publisher": {
+        "@id": "https://vishalvaishnavofficial.pages.dev/#person"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://vishalvaishnavofficial.pages.dev/#person",
+      "name": "Vishal Vaishnav",
+      "alternateName": "VisualistVishal",
+      "url": "https://vishalvaishnavofficial.pages.dev",
+      "image": "https://vishalvaishnavofficial.pages.dev/img/icon.png",
+      "description": "Vishal Vaishnav is an artist and creator sharing original paintings, visual storytelling, and creative inspirations through colors and imagination.",
+      "email": "Vishalvaishnavofficial@gmail.com",
+      "sameAs": [
+        "https://youtube.com/@VisualistVishal",
+        "https://www.pinterest.com/VishalVaishnavOfficial/",
+        "https://open.spotify.com/user/31z3cs2aew3ntj573lgg3bxzmy7e",
+        "https://vishalvaishnavofficial.pages.dev/art-gallery",
+        "https://vishalvaishnavofficial.pages.dev/developers"
+      ]
+    }
   ]
 }
 </script>
