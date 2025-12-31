@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="/img/icon.png" type="image/png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<title>Vishal Vaishnav - Art Gallery</title>
+<meta name="description" content="Explore original artworks and paintings by Vishal Vaishnav, showcasing creative expressions, textures, and stories told through color and form.">
+<meta name="google-site-name" content="Vishal Vaishnav">
+<meta property="og:site_name" content="Vishal Vaishnav">
+<meta property="og:title" content="Vishal Vaishnav - Art Gallery">
+<meta property="og:description" content="Explore original artworks and paintings by Vishal Vaishnav, showcasing creative expressions, textures, and stories told through color and form.">
+<meta property="og:type" content="website">
+<meta name="application-name" content="Vishal Vaishnav">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Art Gallery",
+  "url": "https://vishalvaishnavofficial.pages.dev/art-gallery",
+  "description": "Explore original paintings and visual artworks by Vishal Vaishnav, also known as VisualistVishal.",
+  "author": {
+    "@type": "Person",
+    "name": "Vishal Vaishnav",
+    "alternateName": "VisualistVishal",
+    "url": "https://vishalvaishnavofficial.pages.dev",
+    "image": "https://vishalvaishnavofficial.pages.dev/img/icon.png",
+    "email": "mailto:Vishalvaishnavofficial@gmail.com",
+    "sameAs": [
+      "https://youtube.com/@VisualistVishal",
+      "https://www.pinterest.com/VishalVaishnavOfficial/",
+      "https://open.spotify.com/user/31z3cs2aew3ntj573lgg3bxzmy7e",
+      "https://vishalvaishnavofficial.pages.dev/art-gallery",
+      "https://vishalvaishnavofficial.pages.dev/developers"
+    ]
+  }
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=favorite,share,verified"/>
+<style>
+  :root{
+    --top-gap: 20px;
+  }
+
+body {
+    margin: 0;
+    background: black;
+    color: white;
+    font-family: "Raleway", sans-serif;
+  }
+  body.no-scroll {
+  overflow: hidden;
+}
+  .fonts {
+      font-family: "Raleway", sans-serif;
+      color: white;
+  }
+  /* Top bar */
+  .top {
+    position: fixed;
+    top: 12px;
+    left: 6px;
+    right: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999; /* ensure it stays above everything */
+    padding: 1px 1px;
+    transition: background 240ms ease, box-shadow 240ms ease, transform 240ms ease;
+    background: transparent; /* default transparent */
+    border-radius: 10px;
+    pointer-events: auto;
+    transition: 
+  background 240ms ease,
+  box-shadow 240ms ease,
+  top 240ms ease,
+  left 240ms ease,
+  right 240ms ease,
+  border-radius 240ms ease;
+  font-family: "Raleway", sans-serif;
+  }
+.top.solid {
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 12px 20px;
+    background: black;
+    border-radius: 0;
+    box-shadow: none;
+    font-family: "Raleway", sans-serif;
+}
+
+  .top a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 9px;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+  }  
+
+  .bigg {
+    height: 95vh;
+    background-image: url("https://i.postimg.cc/c4DPxccw/background-artgallery.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+  }
+
+  .bigg::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), black);
+  }
+  .blank {
+    min-height: 100vh;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 30px;
+    position: relative;
+    z-index: 1;
+  }
+  .tittle-text {
+    color: white;
+    text-align: left;
+    font-size: 40px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    margin: 10px 0;
+    letter-spacing: 1px;  
+    margin-bottom: 0;
+  }
+  .ic-tick {
+      vertical-align: middle;
+      font-size: 16px;
+      margin-left: 0;
+      font-variation-settings:
+      'FILL' 1,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+  }
+  .description {
+      font-size: 21px;
+      font-align: left;
+      color: white;
+      font-family: "Raleway", sans-serif;
+  }
+  .logo-text {
+    font-size: 28px;
+    letter-spacing: 20px;
+    font-weight: 350;
+    margin-left: 4px;
+}
+.menu-text {
+    font-size: 18px;
+    letter-spacing: 4px;
+    font-weight: 200;
+    opacity: 0.9;
+}
+.footer {
+    height: fit-content;
+    width: 95%;
+    color: black;
+    font-family: "Raleway", sans-serif;
+    background-color: white;
+    margin-left: 0;
+    padding-top: 22px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 22px;
+}
+.footer-tittle {
+    text-align: left;
+    color: black;
+    text-align: left;
+    font-size: 40px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    margin: 10px 0;
+    letter-spacing: 10px;  
+}
+.footer-des {
+    text-align: left;
+    color: black;
+    text-align: left;
+    font-size: 15px;
+    font-family: "Raleway", sans-serif;
+    margin-top: 2px;
+}
+.footer-des2 {
+    text-align: left;
+    color: black;
+    text-align: left;
+    font-size: 15px;
+    font-family: "Raleway", sans-serif;
+    margin-top: 0;
+}
+.footer-ic-box {
+    height: fit-content;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin: 0 auto;
+}
+.footer-ic {
+    width: 20px;
+    height: 20px;
+}
+.name-text {
+    text-align: left;
+    margin-top: 0;
+    font-size: 16px;
+}
+.painting-img {
+    width: 100%;
+    height: fit-content;
+}
+.painting-tittle {
+    font-size: 22px;
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 2px;
+}
+.painting-des {
+    font-size: 18px;
+    text-align: left;
+    margin-top: 2px;
+}
+
+/* Main box */
+.ig-post{
+  width:100%;
+  height:400px;
+  background:#000;
+  border-radius:12px;
+  position:relative;
+  overflow:hidden;
+  margin-bottom: 35px;
+}
+
+/* Slider */
+.ig-slider{
+  display:flex;
+  width:100%;
+  height:100%;
+  transition:transform .1s ease;
+  margin-bottom: 0;
+}
+
+.ig-slider img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  flex-shrink:0;
+  margin-bottom: 0;
+  
+}
+
+/* Counter top-right */
+.ig-counter{
+  position:absolute;
+  top:10px;
+  right:10px;
+  background:rgba(120,120,120,0.7);
+  color:#fff;
+  font-size:13px;
+  padding:4px 10px;
+  border-radius:14px;
+  z-index:2;
+  font-family: "Raleway", sans serif;
+}
+
+/* Dots */
+.ig-dots{
+  position:absolute;
+  bottom:12px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:6px;
+  z-index:2;
+}
+
+.ig-dots span{
+  width:6px;
+  height:6px;
+  background:rgba(255,255,255,0.5);
+  border-radius:50%;
+}
+
+.ig-dots .active{
+  background:#fff;
+}
+.div-centre {
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.ig-button {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: white;
+  color: black;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 50px;
+  font-size: 16px;
+  z-index: 2;
+  font-family: "Raleway", sans serif;
+  font-weight: 600;
+  text-decoration: none;
+}
+/* Gradient overlay */
+.ig-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 20%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+  box-sizing: border-box;
+  pointer-events: none; /* allow clicks on slider */
+  z-index: 1;  
+  pointer-events: none;
+}
+
+/* Title text inside overlay */
+.ig-title {
+  color: white;
+  font-size: 45px;
+  margin-bottom: 33px;
+  font-family: "Raleway", sans serif;
+  font-weight: 600;
+  padding-right: 33px;
+  gap: 2px;
+}
+.like-button {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+  font-size: 28px;
+  color: white;
+  pointer-events: auto;
+}
+.like-button .material-symbols-outlined {
+  font-variation-settings: 
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+  transition: font-variation-settings 0.2s ease, color 0.01s ease;
+}
+
+.like-button.filled .material-symbols-outlined {
+  font-variation-settings: 
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+  color: white;
+}
+.share-btn{
+  position:absolute;
+  bottom:12px;
+  left:52px; /* next to heart */
+  background:transparent;
+  border:none;
+  cursor:pointer;
+  color:white;
+  font-size:26px;
+  z-index:5;
+}
+.top-stories {
+  display: flex; 
+  overflow-x: auto; 
+  gap: 10px; 
+  padding: 10px;
+}
+.circle {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    color: white;
+    border: 3px solid white;
+    margin-bottom: 35px;            
+  
+}
+.circle-img {
+    width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: block;
+}
+.stories-open {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 9999999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.stories-open-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;  
+}
+.stories-open-img {
+  height: fit-content;
+    width: 100%;n;
+}
+.close-ic {
+   position: absolute;
+    top: 6px;
+    right: 12px;
+    font-size: 35px;
+    cursor: pointer;
+    color: white;
+    z-index: 100000;  
+    paddgin-left: 0;
+}
+.top-stories {
+    font-size: 32px;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-
+.tittle-text2 {
+    font-size: 45px;
+    text-align: left;
+}    weight: 500;
+</style>
+</head>
+<body>
+  <div class="top" id="topbar">
+    <a href="#" class="logo-text">Vishal</a>
+    <a href="menu/index.html" class="menu-text">Menu</a>      
+</div>
+  <div class="bigg"></div>
+
+  <div class="blank" id="blankSection">
+      <h1 class="tittle-text">Art Gallery</h1>
+      <p class="name-text fonts">by Vishal Vaishnav 
+      <span class="material-symbols-outlined ic-tick">verified</span></p>
+            <p class="description">Welcome to my Art Gallery — a space where imagination meets expression and every artwork tells its own story. Each painting is a reflection of emotions, thoughts, and moments captured through colors, textures, and brushstrokes. From detailed artworks to free-flowing creative experiments, this gallery showcases my journey as an artist and visual storyteller. 🌈🖌️
+Every piece here is original, created with passion, patience, and purpose — inviting you to pause, feel, and connect with the art beyond the surface. ✨🖼️</p>
+<p class="top-stories fonts">Top Stories</p>
+<div class="top-stories">
+    <div class="circle">
+        <img src ="https://i.postimg.cc/2y5VK6Mf/IMG-20251228-191752.jpg" class="circle-img" onclick="openPopup()"/>        
+    </div>
+</div>
+<div class="stories-open" id="stories">
+    <span class="close-ic" onclick="closePopup()">×</span>
+    <div class="stories-open-box">
+        <img src ="https://i.postimg.cc/2y5VK6Mf/IMG-20251228-191752.jpg" class="stories-open-img"/>
+        </div>
+</div>  
+<div class="div-centre">
+  <div class="ig-post">
+    <div class="ig-counter">1/4</div>
+    <div class="ig-slider">
+      <img src="https://i.postimg.cc/c4XcCt08/IMG-20251227-132625-1.jpg"
+           data-title="✨ Where the Day Slows Down">
+           <img src="https://i.postimg.cc/7Y62Bsrt/IMG-20251227-132031-1.jpg"
+           data-title="✨ Where the Day Slows Down">
+    </div>
+    <div class="ig-overlay">
+      <div class="ig-title">✨ Where the Day Slows Down</div>
+      <button class="like-button">
+        <span class="material-symbols-outlined">favorite</span>
+      </button>
+    </div>
+    <div class="ig-dots"></div>
+    <a href="https://google.com" class="ig-button">Visit</a>
+    <button class="share-btn">
+      <span class="material-symbols-outlined">share</span>
+    </button>
+  </div>
+</div>
+<div class="div-centre">
+  <div class="ig-post">
+    <div class="ig-counter">1/4</div>
+    <div class="ig-slider">
+      <img src="https://i.ibb.co/qLD8M46D/1766333547637.jpg"
+           data-title="🌌 Where Night Gently Breathes">
+      <img src="https://i.ibb.co/C33CbTcg/1766333547603.jpg"
+           data-title="🌌 Where Night Gently Breathes">
+    </div>
+    <div class="ig-overlay">
+      <div class="ig-title">🌌 Where Night Gently Breathes</div>
+      <button class="like-button">
+        <span class="material-symbols-outlined">favorite</span>
+      </button>
+    </div>
+    <div class="ig-dots"></div>
+    <a href="https://google.com" class="ig-button">Visit</a>
+    <button class="share-btn">
+      <span class="material-symbols-outlined">share</span>
+    </button>
+  </div>
+</div>
+<div class="div-centre">
+  <div class="ig-post">
+    <div class="ig-counter">1/4</div>
+    <div class="ig-slider">
+      <img src="https://i.ibb.co/zh3pJpTm/IMG-20251214-160856-1.jpg"
+           data-title="🌿 The Silent Glow">
+      <img src="https://i.ibb.co/HTBQkgvc/IMG-20251214-160906.jpg"
+           data-title="🌿 The Silent Glow">
+      <img src="https://i.ibb.co/KpxFSrG4/IMG-20251214-160902-1.jpg"
+           data-title="🌿 The Silent Glow">
+      <img src="https://i.ibb.co/rR5w0pCg/IMG-20251214-160908-1.jpg"
+           data-title="🌿 The Silent Glow">
+    </div>
+    <div class="ig-overlay">
+      <div class="ig-title">🌿 The Silent Glow</div>
+      <button class="like-button">
+        <span class="material-symbols-outlined">favorite</span>
+      </button>
+    </div>
+    <div class="ig-dots"></div>
+    <a href="https://google.com" class="ig-button">Visit</a>
+    <button class="share-btn">
+      <span class="material-symbols-outlined">share</span>
+    </button>
+  </div>
+  </div>
+  <div class="div-centre">
+  <div class="ig-post">
+    <div class="ig-counter">1/4</div>
+    <div class="ig-slider">
+      <img src="https://i.ibb.co/RTvWKscm/IMG-20251226-230627.jpg"
+           data-title="✨ Where Light Meets Peace">
+           <img src="https://i.ibb.co/nMZnXhHb/IMG-20251114-170833.jpg"
+           data-title="✨ Where Light Meets Peace">
+      <img src="https://i.ibb.co/6JD5RJ1y/IMG-20251114-170848-1.jpg"
+           data-title="✨ Where Light Meets Peace">
+    </div>
+    <div class="ig-overlay">
+      <div class="ig-title">✨ Where Light Meets Peace</div>
+      <button class="like-button">
+        <span class="material-symbols-outlined">favorite</span>
+      </button>
+    </div>
+    <div class="ig-dots"></div>
+    <a href="https://google.com" class="ig-button">Visit</a>
+    <button class="share-btn">
+      <span class="material-symbols-outlined">share</span>
+    </button>
+  </div>
+</div>
+<div class="div-centre">
+  <div class="ig-post">
+    <div class="ig-counter">1/4</div>
+    <div class="ig-slider">
+      <img src="https://i.postimg.cc/2y5VK6Mf/IMG-20251228-191752.jpg"
+           data-title="🌺 Blooming Serenity">
+           <img src="https://i.postimg.cc/rmjDjWnL/IMG-20251105-133024.jpg"
+           data-title="🌺 Blooming Serenity">
+    </div>
+    <div class="ig-overlay">
+      <div class="ig-title">🌺 Blooming Serenity</div>
+      <button class="like-button">
+        <span class="material-symbols-outlined">favorite</span>
+      </button>
+    </div>
+    <div class="ig-dots"></div>
+    <a href="https://google.com" class="ig-button">Visit</a>
+    <button class="share-btn">
+      <span class="material-symbols-outlined">share</span>
+    </button>
+  </div>
+</div>
+<div class="div-centre">
+  <div class="ig-post">
+    <div class="ig-counter">1/4</div>
+    <div class="ig-slider">
+      <img src="https://i.ibb.co/LDWWbcBd/IMG-20251026-105147.jpg"
+           data-title="🍃 Moments of Silence">
+      <img src="https://i.ibb.co/KcQbqxpY/IMG-20251026-105305.jpg"
+           data-title="🍃 Moments of Silence">
+           <img src="https://i.ibb.co/PZcrPn9g/IMG-20251026-105314.jpg"
+           data-title="🍃 Moments of Silence">
+    </div>
+    <div class="ig-overlay">
+      <div class="ig-title">🍃 Moments of Silence</div>
+      <button class="like-button">
+        <span class="material-symbols-outlined">favorite</span>
+      </button>
+    </div>
+    <div class="ig-dots"></div>
+    <a href="https://google.com" class="ig-button">Visit</a>
+    <button class="share-btn">
+      <span class="material-symbols-outlined">share</span>
+    </button>
+  </div>
+</div>
+<div class="div-centre">
+  <div class="ig-post">
+    <div class="ig-counter">1/4</div>
+    <div class="ig-slider">
+      <img src="https://i.postimg.cc/T2VVHdYj/IMG-20251022-145041-1.jpg"
+           data-title="🌴 Hidden Paradise">
+      <img src="https://i.postimg.cc/jSLJKttt/IMG-20251022-114834-1.jpg"
+           data-title="🌴 Hidden Paradise">
+    </div>
+    <div class="ig-overlay">
+      <div class="ig-title">🌴 Hidden Paradise</div>
+      <button class="like-button">
+        <span class="material-symbols-outlined">favorite</span>
+      </button>
+    </div>
+    <div class="ig-dots"></div>
+    <a href="https://google.com" class="ig-button">Visit</a>
+    <button class="share-btn">
+      <span class="material-symbols-outlined">share</span>
+    </button>
+  </div>
+</div>
+<div class="div-centre">
+  <div class="ig-post">
+    <div class="ig-counter">1/4</div>
+    <div class="ig-slider">
+      <img src="https://i.postimg.cc/pTYH3hSX/IMG-20251227-200126.jpg"
+           data-title="🏞️ Where the Sky Meets Silence">
+      <img src="https://i.postimg.cc/Hsnq9hdv/IMG-20251016-141516-1.jpg"
+           data-title="🏞️ Where the Sky Meets Silence">
+           <img src="https://i.postimg.cc/4yNrM8tN/IMG-20251016-140737-1.jpg"
+           data-title="🏞️ Where the Sky Meets Silence">
+    </div>
+    <div class="ig-overlay">
+      <div class="ig-title">🏞️ Where the Sky Meets Silence</div>
+      <button class="like-button">
+        <span class="material-symbols-outlined">favorite</span>
+      </button>
+    </div>
+    <div class="ig-dots"></div>
+    <a href="https://google.com" class="ig-button">Visit</a>
+    <button class="share-btn">
+      <span class="material-symbols-outlined">share</span>
+    </button>
+  </div>
+</div>
+<div class="div-centre">
+  <div class="ig-post">
+    <div class="ig-counter">1/4</div>
+    <div class="ig-slider">
+      <img src="https://i.postimg.cc/ZRFL34Wp/IMG-20251012-140316-1.jpg"
+           data-title="✨ A Glimpse of Freedom">
+           <img src="https://i.postimg.cc/pLbDcQW3/IMG-20251228-115800.jpg"
+           data-title="✨ A Glimpse of Freedom">
+    </div>
+    <div class="ig-overlay">
+      <div class="ig-title">✨ A Glimpse of Freedom</div>
+      <button class="like-button">
+        <span class="material-symbols-outlined">favorite</span>
+      </button>
+    </div>
+    <div class="ig-dots"></div>
+    <a href="https://google.com" class="ig-button">Visit</a>
+    <button class="share-btn">
+      <span class="material-symbols-outlined">share</span>
+    </button>
+  </div>
+</div>
+
+<p class="painting-tittle"></p>
+  <div class="footer">
+    <p class="footer-tittle">Vishal</p>
+    <p class="footer-des">© 2025 Visualist Vishal · Creating through colors & imagination</p>
+    <p class="footer-des2">Exploring art through colors and imagination. All artworks are original creations.
+Designed & developed by Vishal Vaishnav.</p>
+<p class="footer-des2">• Do not use artworks without permission.</p>
+<div class="footer-ic-box">
+    <a href="https://www.pinterest.com/VishalVaishnavOfficial/">
+    <img src="https://img.icons8.com/?size=100&id=11101&format=png&color=000000" class="footer-ic"></a>
+    <a href="https://youtube.com/@VisualistVishal">
+    <img src="https://img.icons8.com/?size=100&id=37326&format=png&color=000000" class="footer-ic"></a>
+        <a href="https://open.spotify.com/user/31z3cs2aew3ntj573lgg3bxzmy7e?si=tQE3WK0nRgGxPiwHSfQeqQ">
+    <img src="https://img.icons8.com/?size=100&id=11116&format=png&color=000000" class="footer-ic"></a>
+</div>
+    </div>
+</div>
+<script>
+    // Toggle 'solid' class on the top bar when the .blank section reaches the top of viewport
+  (function(){
+    const topbar = document.getElementById('topbar');
+    const blank = document.getElementById('blankSection');
+
+    function check() {
+      if (!blank) return;
+      const rect = blank.getBoundingClientRect();
+      // Change threshold to taste. Here: if the top of .blank is at or above the top-gap + 0px
+      if (rect.top <= (parseInt(getComputedStyle(document.documentElement).getPropertyValue('--top-gap')) + 0)) {
+        topbar.classList.add('solid');
+      } else {
+        topbar.classList.remove('solid');
+      }
+    }
+
+    // Run on load and on scroll
+    document.addEventListener('DOMContentLoaded', check);
+    window.addEventListener('scroll', check, {passive:true});
+    window.addEventListener('resize', check);
+  })();
+document.querySelectorAll(".ig-post").forEach(post => {
+  const slider = post.querySelector(".ig-slider");
+  const images = slider.querySelectorAll("img");
+  const counter = post.querySelector(".ig-counter");
+  const dotsBox = post.querySelector(".ig-dots");
+  const titleBox = post.querySelector(".ig-title");
+  const likeBtn = post.querySelector(".like-button");
+  const shareBtn = post.querySelector(".share-btn");
+
+  let index = 0;
+  let startX = 0;
+
+  // create dots
+  images.forEach((_, i) => {
+    const dot = document.createElement("span");
+    if (i === 0) dot.classList.add("active");
+    dotsBox.appendChild(dot);
+  });
+
+  function update() {
+    slider.style.transform = `translateX(-${index * 100}%)`;
+    counter.textContent = `${index + 1}/${images.length}`;
+    titleBox.textContent = images[index].dataset.title;
+
+    dotsBox.querySelectorAll("span").forEach((d, i) =>
+      d.classList.toggle("active", i === index)
+    );
+  }
+
+  update();
+
+  // swipe touch
+  slider.addEventListener("touchstart", e => startX = e.touches[0].clientX);
+  slider.addEventListener("touchend", e => {
+    const endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50 && index < images.length - 1) index++;
+    if (endX - startX > 50 && index > 0) index--;
+    update();
+  });
+
+  // mouse swipe
+  slider.addEventListener("mousedown", e => startX = e.clientX);
+  slider.addEventListener("mouseup", e => {
+    const endX = e.clientX;
+    if (startX - endX > 50 && index < images.length - 1) index++;
+    if (endX - startX > 50 && index > 0) index--;
+    update();
+  });
+
+  // like button
+  likeBtn.addEventListener("click", () => {
+    likeBtn.classList.toggle("filled");
+  });
+
+  // share
+  shareBtn.addEventListener("click", async () => {
+    if (navigator.share) {
+      await navigator.share({
+        title: document.title,
+        text: titleBox.textContent,
+        url: location.href
+      });
+    } else {
+      alert("Sharing not supported");
+    }
+  });
+});
+function openPopup() {
+  document.getElementById("stories").style.display = "flex";
+  document.getElementById("topbar").style.display = "none";
+
+  document.body.style.overflow = "hidden";
+}
+function closePopup() {
+  document.getElementById("stories").style.display = "none";
+  document.getElementById("topbar").style.display = "flex";
+  document.body.style.overflow = "auto  ne";
+}
+</script>
+</body>
+</html>
